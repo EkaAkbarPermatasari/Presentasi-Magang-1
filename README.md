@@ -56,5 +56,5 @@ Setiap stasiun perekaman data seismik memiliki spesifikasi alat yang berbeda bah
 
 
 # 1.6 Normalization
-
+The strong amplitude of a large earthquake existing in the seismic record is an interference for calculating the dispersion spectrum. The normalization of the original data is to normalize the noise amplitude to eliminate strong amplitude interference and its method is called 1bit normalization before this treatment, traces must be demeaned, detrended and filtered in order to get better data processing result(Bensen, 2007).
 
