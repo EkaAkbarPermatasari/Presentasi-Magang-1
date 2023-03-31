@@ -1,6 +1,14 @@
 # Presentasi-Magang-1
 
-# FDSN-Mass Downloader
+# 1.1 Introduction To Obspy
+The types of Waveforms data, Inventory data, data request clients, metadata, stream and trace object, basic structure of Obspy's internal representation
+
+
+
+# 1.2 Pre-processing data seismogram (waveform)
+
+
+# 1.3 FDSN-Mass Downloader
 ## Rectangular Selection
 
 obspy.clients.fdsn package contains a client to acces web servers that implement the FDSN web service definitions. Here are the step for downloading the seismic data:
@@ -41,10 +49,12 @@ Additional restrictions like temporal bounds, SEED identifier wildcards, and oth
 After determining what to download, the helpers must know where to store the requested data.
 
 
-
-
-
-# Instrument Corecction
+# 1.4 Instrument Corecction
 Setiap stasiun perekaman data seismik memiliki spesifikasi alat yang berbeda bahkan model alat yang sama bisa jadi memiliki respon instrumen yang berbeda, belum lagi adanya pergantian sensor pada suatu stasiun seismik yang rusak, hal ini akan sangat memengaruhi cara kerja instrumen dalam melakukan perekaman dan menghasilkan data sehingga respon instrumen perlu dihilangkan dari data rekaman seismik agar dapat diperoleh hasil representasi aktual dari getaran di bawah permukaan Bumi. Pengabaian untuk menghapus respon instrumen yang bergantung pada frekuensi dari sensor seismik menghasilkan kesalahan amplitudo, fase, dan timing erors yang signifikan yang akan memengaruhi studi yang dilakukan seperti studi tomography, waktu dan lokasi gempa, studi gelombang permukaan, dan ambient noise cross corelation (Wilson et al., 2013). Menerapkan koreksi instrumen memungkinkan analisis seismogram dalam satuan fisik misalnya perpindahan, kecepatan, percepatan patikel. Masalah yang rumit adalah dalam praktiknya istilah "Koreksi Instrumen" lebih dari sekadar seismometer, koreksi instrumen mengkompensasi sistem perekaman lengkap termasuk seismometer, telemetri, digitizer, dan filter anti-alias apa pun (Matthew M. Haney et al, 2012).
 
+# 1.5 Spectral Whitening
+
+
+# 1.6 Normalization
+The strong amplitude of a large earthquake existing in the seismic record is an interference for calculating the dispersion spectrum. The normalization of the original data is to normalize the noise amplitude to eliminate strong amplitude interference and its method is called 1bit normalization before this treatment, traces must be demeaned, detrended and filtered in order to get better data processing result(Bensen, 2007).
 
